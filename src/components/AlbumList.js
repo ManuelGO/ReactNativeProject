@@ -1,5 +1,5 @@
 import React from 'react';
-import {View } from 'react-native';
+import { View } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends React.Component {
@@ -9,7 +9,7 @@ class AlbumList extends React.Component {
     state = {albums: []};
 
     componentWillMount(){
-        fetch('https://rallycoding.herokuapp.com/api/music_albums').then((response)=>{            
+      fetch('https://rallycoding.herokuapp.com/api/music_albums').then((response)=>{            
             return response.json();
         }).then((data)=>{
             this.setState({albums: data});
